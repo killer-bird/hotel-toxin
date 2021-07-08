@@ -1,0 +1,32 @@
+header{
+  background: $white;
+  height: 70px;
+  box-shadow: 0 10px 20px 0 #1F20410D;
+  .header-wrapper{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .button_in{
+      margin-right: 10px;
+    }
+    .header-list{
+      display: flex;
+      .header-item{
+        list-style-type: none;
+        margin-right: 20px;
+        .header-link{
+          font-size: 14px;
+          color: $darkShade50;
+          &:hover{
+            color: $darkShade75;
+          }
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+form.reg.shadow.border(action="POST")
+    h1 Найдём номера под<br> ваши пожелания
+    .dates
+        .dates-arriv
+            label.form-title.arrival(for="arrival" ) прибытие
+            .form-input-block
+                input.form-input.arriv-depart-input(type="text" data-range="true" inline="true" placeholder="дд.мм.гггг")
+                button.form-input-button.arrive-depart-button.material-icons(type="button") expand_more
+        .dates-depart
+            label.form-title.arrival(for="departure") выезд
+            .form-input-block
+                input.form-input.second-input(type="text" data-range="true" placeholder="дд.мм.гггг")
+                button.form-input-button.arrive-depart-button.material-icons(type="button") expand_more
+        //.datepicker-here.arrive-depart-input(data-range="true" )
+    label.form-title.guests(for="guests") гости
+    .iqdropdown
+        p.iqdropdown-selection
+            .iqdropdown-menu
+                .iqdropdown-menu-option(data-id="item1")
+                    div
+                        p.iqdropdown-item взрослые
+
+                .iqdropdown-menu-option(data-id="item2")
+                    div
+                        p.iqdropdown-item дети
+
+                .iqdropdown-menu-option(data-id="item3")
+                    div
+                        p.iqdropdown-item младенцы
+                .datepicker--controls
+                    button.clear очистить
+                    button.apply принять
+

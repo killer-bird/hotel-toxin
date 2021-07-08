@@ -1,0 +1,24 @@
+include ../mixins/img
+include ../mixins/button
+header
+    .container
+        .header-wrapper
+            .header-logo
+                include ../../img/svg/logo.svg
+            nav.header-nav
+                ul.header-list
+                    li.header-item
+                        a.header-link(href="#") О нас
+                    li.header-item
+                        a.header-link(href="#") Услуги
+                    li.header-item
+                        a.header-link(href="#") Вакансии
+                    li.header-item
+                        a.header-link(href="#") Новости
+                    li.header-item
+                        a.header-link(href="#") Соглашения
+
+            .header-buttons
+                       .buttons
+                           +button({link:"#", value:"Войти", mod: ["in","bordered","small"]})
+                           +button({link:"#", value:"Зарегистрироваться", mod: ["reg","small"]})

@@ -1,0 +1,44 @@
+@import "variables";
+@import "footer";
+@import "header";
+@import "button";
+@import "form";
+@import "custom-datepicker";
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Bold.ttf")format('ttf');
+  src: url("../fonts/Montserrat-Regular.ttf")format('ttf');
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  a{
+    text-decoration: none;
+  }
+}
+.active{
+  display: block !important;
+}
+
+.container{
+  padding: 0 140px 0 140px;
+  height: 100%;
+}
+main{
+  height: 832px;
+  background: url("../img/jpg/image 3.jpg") no-repeat center;
+  background-size:cover;
+  padding: 70px 0 18px 0;
+  .main-wrapper{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .descr{
+      font-size: 14px;
+      color: $darkShade75;
+      text-align: right;
+      align-self: flex-end;
+    }
+  }
+}
