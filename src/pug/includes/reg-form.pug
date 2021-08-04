@@ -1,0 +1,24 @@
+include ../mixins/input
+include ../mixins/star-rating
+
+main
+    .main-sign
+        .container
+            .form-box
+                form.form.form_reg
+                    h1.h1 Регистрация аккаунта
+                    .form-content
+                        +input({ placeholder: "Имя"})
+                        +input({ placeholder: "Фамилия"})
+                        .genders
+                            +input({ type:"radio", label: "Мужчина", id:"male", name:"gender"})
+                            +input({ type:"radio", label: "Женщина", id:"female", name:"gender"})
+                        +input({ placeholder: "ДД.ММ.ГГГГ", label:"дата рождения", classes:["datepicker-here"]})
+                        +input({ type:"email", placeholder: "Email", label:"данные для входа в сервис"})
+                        +input({type:"password", placeholder: "Пароль"})
+                        +input({type:"toggle", id:"spec", label:"Получать спецпредложения"})
+                        +button({link: "#", value: "Зарегистрироваться", mod: ["with_arrow", "block"]})
+
+                    include to-create
+
+

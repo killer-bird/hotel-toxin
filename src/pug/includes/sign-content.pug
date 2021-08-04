@@ -1,0 +1,14 @@
+include ../mixins/input
+
+main
+    .main-sign
+        .container
+            .form-box
+                form.form.form_sign
+                    h1 Войти
+                    .form-content
+                        +input({type: "email", placeholder: "Email"})
+                        +input({type: "password", placeholder: "Пароль"})
+                        +button({link:"reg.html", value: "Войти", mod: ["with_arrow", "block"]})
+
+                    include to-create

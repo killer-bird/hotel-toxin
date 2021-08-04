@@ -1,7 +1,7 @@
 mixin button(params)
     -
         const defaultclass = 'button'
-        const link= params.link|| undefined
+        const link = params.link|| undefined
         const value = params.value|| 'Click me'
         let mod = params.mod
         if(mod !== undefined){
@@ -11,6 +11,6 @@ mixin button(params)
             classes = ""
         }
     if(link!== undefined)
-        a.button(href="link" class=classes)=value
+        a.button(href=`${link}` class=classes)=value
     else
         button.button(class=classes)=value

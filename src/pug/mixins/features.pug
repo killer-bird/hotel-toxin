@@ -1,0 +1,13 @@
+mixin feature(params)
+    -
+        const src = params.src
+        const label = params.label
+        const descr = params.descr
+
+
+    .feature
+        .feature-img
+            img(src=`${src}` alt="icon")
+        .feature-content
+           label.feature-label=label
+           p.feature-descr=descr

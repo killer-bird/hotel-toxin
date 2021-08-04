@@ -1,0 +1,19 @@
+@import "variables";
+
+.feature{
+  padding-top: 23px;
+  width: 280px;
+  display: flex;
+  background: white;
+  border-top: 1px solid $darkShade10;
+  .feature-img{
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  .feature-content{
+    .feature-label{
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
+}

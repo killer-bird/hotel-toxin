@@ -1,0 +1,12 @@
+mixin rating(rate, number)
+
+    .rating-item
+        each star in [5,4,3,2,1]
+            case rate
+                when star
+                    input(type="radio" id=`star-${star}-${number}` name=`rating-${number}` checked=true)
+                    label(for=`star-${star}-${number}` title=`Оценка ${star}`)
+                default
+                    input(type="radio" id=`star-${star}-${number}` name=`rating-${number}` )
+                    label(for=`star-${star}-${number}` title=`Оценка ${star}`)
+

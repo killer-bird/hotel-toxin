@@ -1,0 +1,79 @@
+include ../mixins/room
+include ../mixins/input
+
+main
+    .main-rooms
+        .container
+            .rooms-left
+                +input({type:"button", label:"даты пребывания в отеле", id:"dates", value:"expand_more",wClasses:["middle"], placeholder:"19 авг - 23 авг"})
+                +input({type:"button", label:"гости", id:"dates", value:"expand_more", wClasses:["middle"], placeholder:"3 гостя, 1 младенец"})
+                .rooms-left-block
+                     .rooms-title-range
+                         label.form-label диапазон цены
+                         .price
+                             span.min 5 000₽
+                             span  -&nbsp;
+                             span.max  10 000₽
+                     #range.range
+                     .price Стоимость за сутки пребывания в номере
+                .left-block
+                    label._title правила дома
+                    +input({label:"Можно курить", type:"checkbox", id:"smoke", name:"smoke"})
+                    +input({label:"Можно с питомцами", type:"checkbox", id:"pets", name:"pets"})
+                    +input({label:"Можно пригласить гостей (до 10 человек)", type:"checkbox", id:"mquests", name:"mquests"})
+                .left-block
+                    label._title доступность
+                    +input({type:"checkbox_rich", id:"wide_coridor", label:"Широкий коридор", value:"Ширина коридоров в номере не менее 91 см."})
+                    +input({type: "checkbox_rich", id: "invalids_helper", label: "Помощник для инвалидов", value: "На 1 этаже вас встретит специалист  и проводит до номера."})
+                .form-input-block
+                    label.form-label(for="conveniences") удобства номера
+                    #conveniences.iqdropdown.form-wrapper_middle
+                        p.iqdropdown-selection.material-icons
+                        .iqdropdown-menu
+                            .iqdropdown-menu-option(data-id="bedrooms")
+                                div
+                                    p.iqdropdown-item спальни
+
+                            .iqdropdown-menu-option(data-id="beds")
+                                div
+                                    p.iqdropdown-item кровати
+
+                            .iqdropdown-menu-option(data-id="bathrooms")
+                                div
+                                    p.iqdropdown-item ванные комнаты
+                .dropdown
+                    input(type="checkbox" id="toggle")
+                    label._title(for="toggle") дополнительные удобства
+                    .dropdown-content
+                        +input({label: "Завтрак", type: "checkbox", id: "breakfast", name: "breakfast"})
+                        +input({label: "Письменный стол", type: "checkbox", id: "table", name: "table"})
+                        +input({label: "Стул для кормления", type: "checkbox", id: "chair", name: "chair"})
+                        +input({label: "Кроватка", type: "checkbox", id: "bed", name: "bed"})
+                        +input({label: "Телевизор", type: "checkbox", id: "tv", name: "tv"})
+                        +input({label: "Шампунь", type: "checkbox", id: "shampoo", name: "shampoo"})
+
+            .content
+                h1.h2 Номера, которые мы для вас подобрали
+                .rooms
+                    +room({num:888, luxe:"люкс",price:9990,revs:145})
+                    +room({num:840,price:9990,revs:65, rating:4})
+                    +room({num:980, luxe:"люкс",price:8500,revs:35,rating:3})
+                    +room({num:856,price:7300,revs:19})
+                    +room({num:740,price:6000,revs:44, rating:4})
+                    +room({num:982,price:5800,revs:56, rating:3})
+                    +room({num:678,price:5500,revs:45})
+                    +room({num:450,price:5300,revs:39, rating:4})
+                    +room({num:350,price:5000,revs:77, rating:3})
+                    +room({num:666,price:5000,revs:25})
+                    +room({num:444,price:5000,revs:15, rating:3})
+                    +room({num:352,price:5000,revs:55, rating:3})
+
+                .rooms-pag-block
+                    .rooms-pages
+                        button.rooms-pag-num.first 1
+                        span.rooms-pag-num 2
+                        span.rooms-pag-num 3
+                        span.rooms-pag-num ...
+                        span.rooms-pag-num 15
+                        button.rooms-pag-num.arrow.material-icons arrow_forward
+                    .rooms-pag-descr 1 – 12 из 100+ вариантов аренды

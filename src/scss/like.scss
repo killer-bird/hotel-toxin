@@ -1,0 +1,45 @@
+@import "variables";
+
+.like-item{
+  position: relative;
+  width: 40px;
+  height: 20px;
+  label{
+    cursor: pointer;
+    font-size: 10px;
+    color: $darkShade25;
+    position: absolute;
+    bottom: -3px;
+    right: 10px;
+    &:before{
+      position: absolute;
+      content: "favorite_border";
+      font-family: "Material Icons";
+      right: 15px;
+      bottom: 1px;
+
+    }
+  }
+  input{
+    padding: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    background: white;
+    border: 1px solid $darkShade25;
+    border-radius: 10px;
+    webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:checked{
+      border-color: $purple;
+    }
+  }
+  input:checked ~ label  {
+    color: $purple;
+    &:before{
+      content: "favorite";
+    }
+  }
+}

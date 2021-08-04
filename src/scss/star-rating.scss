@@ -1,0 +1,36 @@
+.rating-item {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  &:not(:checked) > input {
+    display: none;
+  }
+  &:not(:checked) > label {
+    cursor: pointer;
+    font-size: 24px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &:not(:checked) > label:before {
+    font-family: "Material Icons";
+    content: 'star_border';
+  }
+  & > input:checked ~ label {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  & > input:checked ~ label:before {
+    content: "star";
+  }
+  &:not(:checked) > label:hover,
+  &:not(:checked) > label:hover ~ label {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:before{
+      content: "star";
+    }
+  }
+}

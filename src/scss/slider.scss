@@ -1,0 +1,49 @@
+.rooms-left-block{
+  margin-bottom: 13px;
+  .price{
+    margin-top: 14px;
+    color: $darkShade50;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .rooms-title-range  {
+    display: flex;
+    justify-content: space-between;
+    .form-label{
+      margin-bottom: 23px;
+    }
+    .price{
+      margin-top: 5px;
+      color: $darkShade50;
+      font-size: 15px;
+      align-self: flex-start;
+
+    }
+  }
+  #range{
+    height: 6px;
+    border: 1px solid $darkShade25;
+    border-radius: 3px;
+    box-shadow: none;
+    .noUi-connects{
+      background: white;
+      border-radius: 3px;
+    }
+    .noUi-connect{
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      border-radius: 3px;
+    }
+    .noUi-handle{
+      position: relative;
+      width: 14px;
+      height: 14px;
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      border: 2px solid #FFFFFF;
+      border-radius: 10px;
+
+      &:after,&:before{
+        content: none;
+      }
+    }
+  }
+}

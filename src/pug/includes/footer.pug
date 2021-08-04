@@ -1,12 +1,13 @@
+include ../mixins/input
 footer
     .container
         .footer-wrapper
             .footer-logo
                include ../../img/svg/logo.svg
-            .footer-title навигация
-            .footer-title о нас
-            .footer-title служба поддержки
-            .footer-title подписка
+            .footer-title._title навигация
+            .footer-title._title о нас
+            .footer-title._title служба поддержки
+            .footer-title._title подписка
             .footer-text.rows5 Бронирование номеров в <br/> лучшем отеле 2019 года по <br/> версии ассоциации «Отельные<br/>взгляды
             a.footer-link(href="#") О нас
             a.footer-link(href="#") О сервисе
@@ -21,9 +22,7 @@ footer
             a.footer-link(href="#") Инвесторы
             .footer-text.rows4 Получайте специальные<br>предложения и новости сервиса
             form.footer-form( action="#" method="get")
-                input.footer-input(type="email" placeholder="Email")
-                button.footer-submit(type="submit")
-                    i.material-icons arrow_forward
+                +input({type:"button", placeholder: "Email", wClasses: ['middle'], bClasses: ['purple'], value: "arrow_forward"})
 
 .footer-bottom
     .container

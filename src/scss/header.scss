@@ -1,30 +1,50 @@
 header{
-  background: $white;
+  background: white;
   height: 70px;
-  box-shadow: 0 10px 20px 0 #1F20410D;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
   .header-wrapper{
-    height: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    .button_in{
-      margin-right: 10px;
+    padding: 15px 0;
+    .header-logo{
+      box-sizing: border-box;
+      margin-right: 285px;
     }
-    .header-list{
+    .header-nav{
       display: flex;
-      .header-item{
-        list-style-type: none;
-        margin-right: 20px;
-        .header-link{
-          font-size: 14px;
-          color: $darkShade50;
-          &:hover{
-            color: $darkShade75;
-          }
+      width: fit-content;
+      .header-buttons{
+        margin-left: 12px ;
+        .button_reg{
+
+          margin-left: 20px;
         }
-        &:last-child{
-          margin-right: 0;
+
+      }
+      .header-list{
+        list-style-type: none;
+        margin: 0;
+        padding: 9px 0;
+
+        .header-item{
+          margin-right: 15px;
+          display: inline-block;
+          .header-link{
+            color: $darkShade50;
+            &:hover{
+              color: $darkShade75;
+            }
+          }
+
+          .header-dropdown{
+            margin-right: 12px;
+            &:after{
+              font-size: 24px;
+              font-family: "Material Icons";
+              content: "expand_more";
+              position: absolute;
+
+            }
+          }
         }
       }
     }

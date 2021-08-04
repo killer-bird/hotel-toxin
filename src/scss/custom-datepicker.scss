@@ -1,0 +1,121 @@
+@import "variables";
+.controls{
+  display: flex;
+  justify-content: space-between;
+  .clear, .apply{
+    font-weight: bold;
+    text-transform: uppercase;
+    background: transparent;
+    color: $purple;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+.datepicker{
+  width: 277px;
+  padding: 20px;
+  font-family: Montserrat, sans-serif;
+  color: $darkShade50;
+  border: 1px solid $darkShade25;
+  .datepicker--pointer{
+    display: none;
+  }
+  .datepicker--days-names{
+    width: 279.39px;
+
+  }
+  .datepicker--cells-days{
+    width: 279.39px;
+    height: 260px;
+    .datepicker--cell-day{
+      height: 40px;
+    }
+  }
+  .datepicker--nav{
+    margin-bottom: 30px;
+    border: none;
+    .datepicker--nav-action{
+      color: $purple;
+    }
+    .datepicker--nav-title, i{
+      font-size: 19px;
+      color: $darkShade100;
+      font-weight: bold;
+    }
+  }
+  .datepicker--cell-day{
+    font-size: 12px;
+  }
+  .datepicker--day-name{
+    font-weight: bold;
+    color: $purple;
+    text-transform: none;
+  }
+
+
+  .-in-range-{
+    background: linear-gradient(180deg, rgba(187, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+  }
+  .-range-from-{
+    &::after{
+      border-radius: 25px 0 0 25px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(187, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+      content: "";
+    }
+  }
+  .-range-to-{
+    &::before{
+      border-radius: 0 25px 25px 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(187, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+      display: inline-block;
+      content: "";
+    }
+  }
+
+  .-current-{
+    font-weight: bold;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    color: white;
+    &.-focus-{
+      color: white;
+    }
+  }
+  .-selected-{
+    font-weight: bold;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
+}
+.iqdropdown.menu-open{
+  border: 1px solid $darkShade50;
+  .iqdropdown-selection::after{
+    background: none;
+  }
+}
+.iqdropdown {
+  width: 338px;
+  margin-bottom: 31px;
+
+  .iqdropdown-selection {
+    color: $darkShade75;
+    font-size: 14px;
+
+    &::after {
+      background: none;
+      font-family: 'Material Icons';
+      font-size: 24px;
+      color: $darkShade50;
+      right: 10px;
+      top: -26%;
+      content: "expand_more";
+    }
+  }
+}

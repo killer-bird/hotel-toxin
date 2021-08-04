@@ -2,7 +2,7 @@
 $height: 44px;
 $height-small: 34px;
 $width: 99px;
-$padding: 15px;
+$padding: 14px;
 $padding-small-lr: 20px;
 $border-width: 2px;
 $linear-gradient: linear-gradient(
@@ -31,9 +31,9 @@ $arrow-right: 14px;
   max-width: 320px;
 }
 .button {
-  margin: 0;
+  cursor: pointer;
+  margin: 3px;
   display: inline-block;
-  font-family: Montserrat;
   font-size: 12px;
   font-weight: bold;
   background: $linear-gradient;

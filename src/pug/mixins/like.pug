@@ -1,0 +1,9 @@
+mixin like(label, checked)
+    if checked
+        .like-item
+            input(type="checkbox" id=label checked)
+            label(for=label)=label
+    else
+        .like-item
+            input(type="checkbox" id=label)
+            label(for=label)=label

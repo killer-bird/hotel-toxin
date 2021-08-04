@@ -1,0 +1,95 @@
+include ../mixins/img
+include ../mixins/features
+include ../mixins/chart
+include ../mixins/input
+include ../mixins/bullet-list
+include ../mixins/comment
+include ../mixins/button
+
+
+main
+    .main-room
+        .room-pics
+            .room-pics-left
+            .room-pics-right
+                .room-pics-right-top
+                .room-pics-right-bot
+        .container
+            .room-content
+                .room-details
+                    .room-details-top
+                        .room-details-features
+                            h2.h2 Сведения о номере
+                            +feature({src: "SRC/img/svg/insert_emoticon.svg", label: "Комфорт", descr: "Шумопоглощающие стены"})
+                            +feature({src: "SRC/img/svg/location_city.svg", label: "Удобство", descr: "Окно в каждой из спален"})
+                            +feature({src: "SRC/img/svg/whatshot.svg", label: "Уют", descr: "Номер оснащён камином"})
+                        .room-impressions
+                            h2.h2 Впечатления от номера
+                            +chart()
+                        .room-detail-form
+                            .form
+                                .form-payment-text
+                                    .form-payment-number
+                                        .number № 888
+                                        .luxe люкс
+                                    .price  #[strong 9 990₽ ] в сутки
+
+                                .dates
+                                    +input({type: "button", label: "прибытие", wClasses: ['small'], value: "expand_more", classes: ["datepicker-here"], placeholder: "ДД.ММ.ГГГГ", id: "arrive", label: "прибытие", bClasses: ["datepicker"]})
+                                    +input({type: "button", label: "выезд", wClasses: ['small'], value: "expand_more", classes: ["second-input"], placeholder: "ДД.ММ.ГГГГ", id: "departure", label: "выезд", bClasses: ["datepicker"]})
+
+                                .form-input-block
+                                    label.form-label(for="guests") гости
+                                    #guests.iqdropdown.form-wrapper
+                                        p.iqdropdown-selection.material-icons
+                                        .iqdropdown-menu
+                                            .iqdropdown-menu-option(data-id="adults")
+                                                div
+                                                    p.iqdropdown-item взрослые
+
+                                            .iqdropdown-menu-option(data-id="kids")
+                                                div
+                                                    p.iqdropdown-item дети
+
+                                            .iqdropdown-menu-option(data-id="babys")
+                                                div
+                                                    p.iqdropdown-item младенцы
+                                            .controls
+                                                .clear очистить
+                                                .apply применить
+                                    .form-payment-text
+                                        .form-payment-price-by-the-day 9 990₽ х 4 суток
+                                        .form-payment-full-price 39 960₽
+                                    .form-payment-text
+                                        .form-payment-service-sale Сбор за услуги: скидка 2 179₽
+                                        .form-payment-service-charge 0₽
+                                    .form-payment-text
+                                        .form-payment-additional-services Сбор за дополнительные услуги
+                                        .form-payment-additional-services-price 300₽
+                                    .form-payment-text-total
+                                        .format-payment-total Итого
+                                        .format-payment-total-price 38 081₽
+                                    +button({link:"#", value:"Забронировать", mod: ["with_arrow", "block"]})
+
+
+
+
+
+                .comment
+                    .comment-header
+                        h2.h2 Отзывы посетителей номера
+                        span 2 отзыва
+                    +comment({avatar:"src/img/png/sarafan.png",title:"Мурат Сарафанов", timePassed:"5 дней назад",likes:12,checked:true, text:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+                    +comment({avatar: "src/img/png/steklo.png", title: "Патрисия Стёклышкова", timePassed: "Неделю назад", likes: 2, text:"Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})
+                .room-note
+                    .room-rools
+                        h2.h2 Правила
+                        +bulletList(['Нельзя с питомцами','Без вечеринок и мероприятий', 'Время прибытия — после 13:00,\n' +
+                        'а выезд до 12:00'])
+
+                    .room-cansel
+                        h2.h2 Отмена
+                        .room-cansel-content Бесплатная отмена в течение 48 ч. После <br> этого при отмене не позднее чем за 5 дн. до <br> прибытия вы получите полный возврат за <br> вычетом сбора за услуги.
+
+
+

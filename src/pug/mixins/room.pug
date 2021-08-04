@@ -1,0 +1,26 @@
+include star-rating
+
+mixin room(params)
+    -
+        const number = params.num
+        const luxe = params.luxe || ""
+        const price = params.price
+        const rating = params.rating || 5
+        const revs = params.revs
+        const link = params.roomLink
+
+    a.roomLink(href=`room${number}.html`)
+        .room-card
+            .img
+                img(src=`SRC/img/png/room${number}.png` widht="270" height="151" alt="#{number}")
+            .room-card-container
+                .room-card-content
+                    .room-card-index
+                        .number
+                            p.number № #{number}
+                            p.luxe #{luxe}
+                        p.price #[strong #{price}] в сутки
+                    .room-card-rate
+                        .rate
+                            +rating(rating, number)
+                        p.revs #[strong #{revs}] Отзывов

@@ -1,3 +1,8 @@
-mixin image(src)
+mixin image(params)
+    -
+        const width = params.width
+        const height = params.height
+        const src = params.src
+
     .img
-        img(src=src)
+        img(src=src widht=width height=height)

@@ -1,0 +1,25 @@
+include like
+include img
+
+mixin comment(params)
+    -
+      const avatar = params.avatar
+      const title = params.title
+      const timePassed = params.timePassed
+      const likes = params.likes
+      const text = params.text
+      const checked = params.checked
+
+    .comment-body
+        .comment-avatar
+            +image({src: avatar, width:44, height: 44})
+            +like(likes,checked)
+        .comment-content
+            .comment-title=title
+            .comment-timePassed=timePassed
+            .comment-text=text
+
+
+
+
+

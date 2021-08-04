@@ -4,21 +4,22 @@ header
     .container
         .header-wrapper
             .header-logo
-                include ../../img/svg/logo.svg
+                a(href='index.html')
+                    include ../../img/svg/logo.svg
             nav.header-nav
                 ul.header-list
                     li.header-item
                         a.header-link(href="#") О нас
                     li.header-item
-                        a.header-link(href="#") Услуги
+                        a.header-link.header-dropdown(href="#") Услуги
                     li.header-item
                         a.header-link(href="#") Вакансии
                     li.header-item
                         a.header-link(href="#") Новости
                     li.header-item
-                        a.header-link(href="#") Соглашения
+                        a.header-link.header-dropdown(href="#") Соглашения
 
-            .header-buttons
-                       .buttons
-                           +button({link:"#", value:"Войти", mod: ["in","bordered","small"]})
-                           +button({link:"#", value:"Зарегистрироваться", mod: ["reg","small"]})
+                .header-buttons
+                           .buttons
+                               +button({link:"sign.html", value:"Войти", mod: ["in","bordered","small"]})
+                               +button({link:"reg.html", value:"Зарегистрироваться", mod: ["reg","small"]})

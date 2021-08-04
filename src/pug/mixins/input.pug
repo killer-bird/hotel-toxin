@@ -1,0 +1,73 @@
+mixin input(params)
+    -
+        let classes = params.classes || []
+        let toggle = params.toggle
+        let wClasses = params.wClasses
+        const radio = params.radio
+        const name= params.name
+        const id = params.id
+        const label = params.label || ""
+        const type = params.type || "text"
+        const placeholder = params.placeholder || ""
+        const value = params.value || ""
+        let bClasses = params.bClasses || []
+
+        let classCheck = (classArray, defaultClass)=>{
+            if (classArray){
+                classArray = classArray.map((item) => `${defaultClass}_${item}`)
+                return classArray.join("")
+            }else {
+                return ""
+            }
+        }
+
+    case label
+        when label
+            case type
+
+                when "button"
+                    .form-input-block
+                        label.form-label(for=id name=name)=label
+                        .form-wrapper(class=classCheck(wClasses, "form-wrapper") name=name id=id)
+                            input.form-input(type="text" name=name placeholder=placeholder class=classes.join(' '))
+                            button.form-button.material-icons(type="button" name=name class= classCheck(bClasses, "form-button") )=value
+                when "checkbox"
+                    .form-input-block
+                        .checkbox-item
+                            input(type="checkbox" name=name id=id)
+                            label(for=id)=label
+
+                when "checkbox_rich"
+                    .form-input-block
+                        .checkbox-item.rich
+                            input(type="checkbox" name=name id=id)
+                            label(for=id)=label
+                                p.checkbox-text=value
+                when "toggle"
+                    .form-input-block
+                        .toggle-item
+                            input(type="checkbox" name=name id=id)
+                            label(for=id)=label
+                when "radio"
+                    .form-input-block
+                        .radio-item
+                            input(type="radio" name=name id=id)
+                            label(for=id)=label
+                default
+                    .form-input-block
+                        label.form-label(for=id)=label
+                        .form-wrapper(class=classCheck(wClasses, "form-wrapper") name=name id=id)
+                            input.form-input(type="text" name=name class=classes id=id placeholder=placeholder)
+        default
+            case type
+                when "button"
+                    .form-input-block
+                        .form-wrapper(class=classCheck(wClasses, "form-wrapper") name=name id=id)
+                            input.form-input(type="text" placeholder=placeholder name=name class=classes.join(' '))
+                            button.form-button.material-icons(type="button" name=name class= classCheck(bClasses, "form-button") value=value)
+                default
+                    .form-input-block
+                        .form-wrapper(class=classCheck(wClasses, "form-wrapper") name=name id=id)
+                            input.form-input(type="text"  class=classes id=id name=name placeholder=placeholder)
+
+
