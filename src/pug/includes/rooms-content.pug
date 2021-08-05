@@ -6,7 +6,25 @@ main
         .container
             .rooms-left
                 +input({type:"button", label:"даты пребывания в отеле", id:"dates", value:"expand_more",wClasses:["middle"], placeholder:"19 авг - 23 авг"})
-                +input({type:"button", label:"гости", id:"dates", value:"expand_more", wClasses:["middle"], placeholder:"3 гостя, 1 младенец"})
+                .form-input-block
+                    #guests.iqdropdown.form-wrapper_middle
+                        p.iqdropdown-selection.material-icons
+                        .iqdropdown-menu
+                            .iqdropdown-menu-option(data-id="adults")
+                                div
+                                    p.iqdropdown-item взрослые
+
+                            .iqdropdown-menu-option(data-id="kids")
+                                div
+                                    p.iqdropdown-item дети
+
+                            .iqdropdown-menu-option(data-id="babys")
+                                div
+                                    p.iqdropdown-item младенцы
+                            .controls
+                                .clear очистить
+                                .apply применить
+
                 .rooms-left-block
                      .rooms-title-range
                          label.form-label диапазон цены
@@ -20,11 +38,11 @@ main
                     label._title правила дома
                     +input({label:"Можно курить", type:"checkbox", id:"smoke", name:"smoke"})
                     +input({label:"Можно с питомцами", type:"checkbox", id:"pets", name:"pets"})
-                    +input({label:"Можно пригласить гостей (до 10 человек)", type:"checkbox", id:"mquests", name:"mquests"})
+                    +input({label:"Можно пригласить гостей <br> (до 10 человек)", type:"checkbox", id:"mquests", name:"mquests"})
                 .left-block
                     label._title доступность
-                    +input({type:"checkbox_rich", id:"wide_coridor", label:"Широкий коридор", value:"Ширина коридоров в номере не менее 91 см."})
-                    +input({type: "checkbox_rich", id: "invalids_helper", label: "Помощник для инвалидов", value: "На 1 этаже вас встретит специалист  и проводит до номера."})
+                    +input({type:"checkbox_rich", id:"wide_coridor", label:"Широкий коридор", value:"Ширина коридоров в номере не <br> менее 91 см."})
+                    +input({type: "checkbox_rich", id: "invalids_helper", label: "Помощник для инвалидов", value: "На 1 этаже вас встретит специалист <br> и проводит до номера."})
                 .form-input-block
                     label.form-label(for="conveniences") удобства номера
                     #conveniences.iqdropdown.form-wrapper_middle

@@ -1,4 +1,4 @@
-let togler = 0;
+let toggler = 0;
 const mainInput = $('#arrive input')
 
 $(document).ready(()=>{
@@ -13,8 +13,8 @@ $(document).ready(()=>{
         minDate: new Date(),
         onShow: function (dp, animationCompleted) {
             if (animationCompleted) {
-                ++togler
-                console.log(togler, 'show')
+                ++toggler
+                console.log(toggler, 'show')
             }else {
                 if (dp.$datepicker.find('.datepicker--nav').html()) {
                     if (dp.$datepicker.find('.controls').html() === undefined) { /*ONLY when button don't existis*/
@@ -32,8 +32,8 @@ $(document).ready(()=>{
         },
         onHide: function (dp, animationCompleted) {
             if(animationCompleted){
-                togler--
-                console.log(togler, 'hide')
+                toggler--
+                console.log(toggler, 'hide')
             }
         },
         onSelect: function (formattedDate, date, dp) {
@@ -51,7 +51,7 @@ $(document).ready(()=>{
         datepicker.show()
     })
     $('.form-button').click(function () {
-        if(togler===0){
+        if(toggler===0){
             datepicker.show()
         }else {
             datepicker.hide()

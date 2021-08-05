@@ -35,14 +35,14 @@ mixin input(params)
                     .form-input-block
                         .checkbox-item
                             input(type="checkbox" name=name id=id)
-                            label(for=id)=label
+                            label(for=id) !{label}
 
                 when "checkbox_rich"
                     .form-input-block
                         .checkbox-item.rich
                             input(type="checkbox" name=name id=id)
                             label(for=id)=label
-                                p.checkbox-text=value
+                                p.checkbox-text !{value}
                 when "toggle"
                     .form-input-block
                         .toggle-item

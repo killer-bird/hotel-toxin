@@ -58,7 +58,7 @@ body {
 }
 
 .container{
-  padding: 0 140px 0 140px;
+  padding: 0 10vw 0;
   width: 100%;
   height: 100%;
 }
@@ -207,13 +207,6 @@ main{
               background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
               font-size: 12px;
               font-weight: bold;
-              //&:hover{
-              //  background: linear-gradient(
-              //                  180deg,
-              //                  rgba(188, 156, 255, 0.5) 0%,
-              //                  rgba(139, 164, 249, 0.5) 100%
-              //  );
-              //}
             }
             .arrow{
               background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
@@ -337,5 +330,117 @@ main{
         height: 200px;
       }
     }
+  }
+}
+
+
+
+
+@media screen and (max-width: 1300px){
+  header{
+    .container{
+      padding: 0 5vw;
+    }
+  }
+
+  main{
+    .main-rooms{
+      .container{
+        padding: 0 3vw;
+        .rooms-left{
+          margin: 30px 20px 0 0;
+        }
+        .content{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          .rooms{
+            display: grid;
+            justify-content: center;
+            grid-template-columns: 1fr  1fr;
+            grid-column-gap:10px;
+            grid-row-gap: 10px;
+          }
+        }
+
+
+      }
+    }
+  }
+  footer{
+  }
+}
+
+@media screen and (max-width: 1000px){
+  header{
+    .container{
+      padding: 0;
+      .header-wrapper{
+        .header-list{
+          display: none;
+        }
+      }
+    }
+  }
+  main{
+    .main-rooms{
+      .container{
+        display: block;
+        .rooms-left{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .content{
+          .h2{
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  footer{
+
+  }
+}
+@media screen and (max-width: 600px){
+  header{
+    .container{
+      padding: 0;
+      .header-wrapper{
+        .header-list{
+          display: none;
+        }
+      }
+    }
+  }
+  main{
+    .main-rooms{
+      .container{
+        display: block;
+        .rooms-left{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .content{
+          .rooms{
+            display: grid;
+            justify-content: center;
+            place-self: center;
+            align-items: center;
+            grid-template-columns: 1fr;
+            grid-column-gap:10px;
+            grid-row-gap: 10px;
+          }
+          .h2{
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  footer{
+
   }
 }

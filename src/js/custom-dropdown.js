@@ -59,14 +59,27 @@ $(document).ready(() => {
             return result.length > 0 ? result.join(', '):'Удобства'
         }
     })
-    const dr = $('iqdropdown-menu').find()
-    console.log(dr)
-    dr.off('click')
 
 
 
-    $( "body" ).on( "click", ".iqdropdown-menu" , function () {
-        console.log(142)
-        dr.addClass("open")
-    });
+    //закрытие и открытие дропдауна, нормальная работа кнопок
+    $(document).click(function(e){
+        const guests = $("#guests")
+        const conveniences = $("#conveniences")
+        if((e.target!==guests[0] && !guests.has(e.target).length) || e.target.className ==="apply"){
+            guests[0].classList.remove('menu-open')
+
+        }else {
+            guests[0].classList.add('menu-open')
+
+        }
+        if($('.form-input-block').find('#conveniences').html()) {
+            if((e.target!==conveniences[0] && !conveniences.has(e.target).length || e.target.className ==="apply")) {
+                conveniences[0].classList.remove('menu-open')
+            }else
+                conveniences[0].classList.add('menu-open')
+        }
+
+    })
+
 });
