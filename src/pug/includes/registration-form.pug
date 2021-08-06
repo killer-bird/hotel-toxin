@@ -1,35 +1,35 @@
 include ../mixins/input
+main
+    .index-block
+        form.form.form_rooms
+            h1.h1 Найдём номера под<br>ваши пожелания
+            .dates
+                +input({type:"button", label:"прибытие",
+                    wClasses: ['small'], value: "expand_more", classes: ["datepicker-here"],
+                    placeholder: "ДД.ММ.ГГГГ", id:"arrive", label: "прибытие", bClasses: ["datepicker"]
+                })
+                +input({type:"button",label:"выезд",
+                    wClasses:  ['small'], value: "expand_more",classes: ["second-input"],
+                    placeholder: "ДД.ММ.ГГГГ", id: "departure", label: "выезд", bClasses: ["datepicker"]
+                })
+            .form-input-block
+                label.form-label(for="guests") гости
+                #guests.iqdropdown.form-wrapper
+                    p.iqdropdown-selection.material-icons
+                    .iqdropdown-menu
+                        .iqdropdown-menu-option(data-id="adults")
+                            div
+                                p.iqdropdown-item взрослые
 
-.index-block
-    form.form.form_rooms
-        h1.h1 Найдём номера под<br>ваши пожелания
-        .dates
-            +input({type:"button", label:"прибытие",
-                wClasses: ['small'], value: "expand_more", classes: ["datepicker-here"],
-                placeholder: "ДД.ММ.ГГГГ", id:"arrive", label: "прибытие", bClasses: ["datepicker"]
-            })
-            +input({type:"button",label:"выезд",
-                wClasses:  ['small'], value: "expand_more",classes: ["second-input"],
-                placeholder: "ДД.ММ.ГГГГ", id: "departure", label: "выезд", bClasses: ["datepicker"]
-            })
-        .form-input-block
-            label.form-label(for="guests") гости
-            #guests.iqdropdown.form-wrapper
-                p.iqdropdown-selection.material-icons
-                .iqdropdown-menu
-                    .iqdropdown-menu-option(data-id="adults")
-                        div
-                            p.iqdropdown-item взрослые
+                        .iqdropdown-menu-option(data-id="kids")
+                            div
+                                p.iqdropdown-item дети
 
-                    .iqdropdown-menu-option(data-id="kids")
-                        div
-                            p.iqdropdown-item дети
+                        .iqdropdown-menu-option(data-id="babys")
+                            div
+                                p.iqdropdown-item младенцы
+                        .controls
+                            .clear очистить
+                            .apply применить
 
-                    .iqdropdown-menu-option(data-id="babys")
-                        div
-                            p.iqdropdown-item младенцы
-                    .controls
-                        .clear очистить
-                        .apply применить
-
-        +button({link:"rooms.html", value:"Подобрать номер", mod: ["with_arrow", "block"]})
+            +button({link:"rooms.html", value:"Подобрать номер", mod: ["with_arrow", "block"]})

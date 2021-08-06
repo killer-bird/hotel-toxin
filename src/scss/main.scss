@@ -34,7 +34,6 @@ body {
 
 
   .form-label, ._title{
-
     margin-bottom: 5px;
     text-transform: uppercase;
     font-weight: bold;
@@ -142,7 +141,6 @@ main{
       width: 100%;
       height: 100%;
       justify-content: space-between;
-
       .descr{
         font-size: 14px;
         color: $darkShade75;
@@ -167,12 +165,10 @@ main{
       }
       .form_sign{
         margin: 172px 0 172px 0;
-
       }
       .form_reg{
         .genders{
           display: flex;
-
         }
       }
     }
@@ -218,7 +214,6 @@ main{
               border: none;
 
             }
-
           }
           .rooms-pag-descr{
             margin: 10px 0 110px;
@@ -281,26 +276,30 @@ main{
   .main-room{
     .room-pics{
       display: flex;
+      height: 485px;
       .room-pics-left{
-        width: 981px;
-        height: 486px;
-        background: url("../img/jpg/image888.jpg");
+        width: 70%;
+        background: url("../img/jpg/image888.jpg") no-repeat;
+        background-size: cover;
       }
       .room-pics-right{
-        width: 461px;
+        width: 30%;
         height: 485px;
         .room-pics-right-top{
-          width: 461px;
-          height: 243px;
-          background: url("../img/jpg/image888(2).jpg");
+          width: 100%;
+          height: 50%;
+          background: url("../img/jpg/image888(2).jpg") no-repeat;
+          background-size: cover;
         }
         .room-pics-right-bot{
-          width: 461px;
-          height: 243px;
-          background: url("../img/jpg/image888(3).jpg");
+          width: 100%;
+          height: 50%;
+          background: url("../img/jpg/image888(3).jpg") no-repeat;
+          background-size: cover;
         }
       }
     }
+
     .room-content{
       margin-top: 70px;
       .room-details-top{
@@ -342,18 +341,16 @@ main{
       padding: 0 5vw;
     }
   }
-
   main{
     .main-rooms{
       .container{
         padding: 0 3vw;
+        display: flex;
+        justify-content: space-evenly;
         .rooms-left{
           margin: 30px 20px 0 0;
         }
-        .content{
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
+        .content {
           .rooms{
             display: grid;
             justify-content: center;
@@ -366,15 +363,73 @@ main{
 
       }
     }
+    .main-room{
+      .room-pics{
+        .room-pics-left{
+          width: 100%;
+          background: url("../img/jpg/image888.jpg") no-repeat;
+          background-size: cover;
+        }
+        .room-pics-right{
+          display: none;
+        }
+      }
+      .container{
+        padding: 0 15px;
+        .room-content{
+          margin-top: 70px;
+          .room-details-top{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .room-details-features{
+              margin-right: 10px;
+              .feature:nth-child(2){
+                border: none;
+              }
+            }
+            .room-impressions{
+              margin-right: 10px;
+              h2{
+                margin-left: 30px;
+              }
+            }
+          }
+          .room-note{
+            margin: 30px 0 70px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            .room-rools{
+                margin: 0;
+            }
+            .room-cansel{
+              margin: 0 40px 0 0;
+            }
+          }
+          .comment{
+            width: fit-content;
+            margin: 20px auto;
+          }
+        }
+      }
+
+
+    }
+
   }
   footer{
+    .container{
+      padding: 0 10px;
+    }
   }
 }
 
 @media screen and (max-width: 1000px){
   header{
     .container{
-      padding: 0;
+      padding: 0 2vw;
       .header-wrapper{
         .header-list{
           display: none;
@@ -383,6 +438,20 @@ main{
     }
   }
   main{
+    .main-index{
+      .container{
+        .main-wrapper{
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          .descr{
+            align-self: center;
+
+          }
+        }
+      }
+    }
+
     .main-rooms{
       .container{
         display: block;
@@ -392,6 +461,9 @@ main{
           align-items: center;
         }
         .content{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           .h2{
             text-align: center;
           }
@@ -400,13 +472,22 @@ main{
     }
   }
   footer{
-
+    .footer-main{
+      display: none;
+    }
+    .footer-bottom{
+      display: none;
+    }
+    .footer-mobile{
+      padding: 50px;
+      height: fit-content;
+      display: flex;
+    }
   }
 }
 @media screen and (max-width: 600px){
   header{
     .container{
-      padding: 0;
       .header-wrapper{
         .header-list{
           display: none;
@@ -415,7 +496,9 @@ main{
     }
   }
   main{
+
     .main-rooms{
+      box-shadow: 0 1px 1px  $darkShade10;
       .container{
         display: block;
         .rooms-left{
@@ -441,6 +524,9 @@ main{
     }
   }
   footer{
-
+    .footer-mobile{
+      height: fit-content;
+      padding: 50px 0;
+    }
   }
 }
