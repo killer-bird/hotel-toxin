@@ -541,3 +541,17 @@ main{
     }
   }
 }
+@media (max-device-width: 520px){
+  .main-index, .main-sign {
+    height: fit-content;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+  footer{
+    .footer-mobile{
+      height: fit-content;
+      min-height: 20vh;
+    }
+  }
+}
