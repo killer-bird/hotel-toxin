@@ -15,17 +15,16 @@ module.exports = {
         //     "webpack-material-design-icons"
         // ],
         app:['./src/pug/pages/index/index.js','./src/scss/main.scss'],
-        // room:['./src/pug/pages/rooms/rooms.js']
+        room:['./src/pug/pages/rooms/rooms.js']
 
     },
     output: {
         filename: "[name].js",
         path: path.resolve(__dirname, './dist'),
-
-
     },
     resolve: {
         alias: {
+         src: path.resolve(__dirname, './src'),
          NodeModules: path.resolve(__dirname,'./node_modules'),
          JS: path.resolve(__dirname,'./src/js'),
          SCSS: path.resolve(__dirname,'./src/scss')
@@ -69,16 +68,25 @@ module.exports = {
 
     ],
     module: {
-
         rules: [
-
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
-                use: ['url-loader'],
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[path][name].[ext]',
+
+                    }
+                }],
             },
             {
                 test: /\.(woff|woff2|ttf)$/i,
-                use: ['url-loader'],
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name:'[path][name].[ext]'
+                    }
+                }],
             },
             {
                 test: /\.pug$/i,
@@ -89,7 +97,6 @@ module.exports = {
                     },
                 }
                 ],
-
             },
             {
                 test: /\.css$/i,
