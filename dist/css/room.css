@@ -1503,10 +1503,10 @@ main .main-room .room-content {
     display: flex; } }
 
 @media screen and (max-width: 600px) {
-  header .container .header-wrapper {
-    height: 10vh; }
-    header .container .header-wrapper .header-list {
-      display: none; }
+  header .container .header-wrapper .header-list {
+    display: none; }
+  header .container .header-wrapper .header-buttons .buttons a.button.button_reg.button_small {
+    display: none; }
   main .main-index {
     height: fit-content;
     min-height: 80vh; }
@@ -1535,6 +1535,8 @@ main .main-room .room-content {
     min-height: 20vh; } }
 
 @media (max-device-width: 520px) {
+  .header-buttons .buttons .button_reg {
+    display: none; }
   .main-index, .main-sign {
     height: fit-content;
     min-height: 80vh;

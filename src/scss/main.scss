@@ -490,10 +490,20 @@ main{
   header{
     .container{
       .header-wrapper{
-        height: 10vh;
+
         .header-list{
           display: none;
         }
+        .header-buttons{
+          .buttons{
+
+            a.button.button_reg.button_small{
+              display: none;
+            }
+          }
+
+        }
+
       }
     }
   }
@@ -542,7 +552,15 @@ main{
   }
 }
 @media (max-device-width: 520px){
-  .main-index, .main-sign {
+  .header-buttons {
+    .buttons {
+
+      .button_reg {
+        display: none;
+      }
+    }
+  }
+    .main-index, .main-sign {
     height: fit-content;
     min-height: 80vh;
     display: flex;
