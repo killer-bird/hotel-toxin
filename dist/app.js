@@ -26748,18 +26748,11 @@ $(document).ready(()=>{
 $(document).ready(() => {
     $('#guests.iqdropdown').iqDropdown({
         maxItems:20,
-        controls: {
-            position: 'right',
-            displayCls: 'iqdropdown-item-display',
-            controlsCls: 'iqdropdown-item-controls',
-            counterCls: 'counter'
-        },
         //этот говнокод был проспонсирован замечательным человеком, который
         // написал этот прекрасный плагин без функции Clear
         setSelectionText: function setSelectionText(itemCount, totalItems){
             let total = itemCount['kids'] + itemCount['babys'] +itemCount['adults']
             $('.clear').click(()=>{
-
                 for(let i of Object.keys(itemCount)){
                     itemCount[i] = 0
                 }
@@ -26857,8 +26850,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var JS_custom_dropdown__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(JS_custom_dropdown__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var SCSS_main_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! SCSS/main.scss */ "./src/scss/main.scss");
-/* harmony import */ var JS_custom_chart__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! JS/custom-chart */ "./src/js/custom-chart.js");
+/* harmony import */ var JS_custom_chart__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! JS/custom-chart */ "./src/js/custom-chart.js");
+/* harmony import */ var SCSS_main_scss__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! SCSS/main.scss */ "./src/scss/main.scss");
 
 
 

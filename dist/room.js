@@ -13445,18 +13445,11 @@ __webpack_require__.r(__webpack_exports__);
 $(document).ready(() => {
     $('#guests.iqdropdown').iqDropdown({
         maxItems:20,
-        controls: {
-            position: 'right',
-            displayCls: 'iqdropdown-item-display',
-            controlsCls: 'iqdropdown-item-controls',
-            counterCls: 'counter'
-        },
         //этот говнокод был проспонсирован замечательным человеком, который
         // написал этот прекрасный плагин без функции Clear
         setSelectionText: function setSelectionText(itemCount, totalItems){
             let total = itemCount['kids'] + itemCount['babys'] +itemCount['adults']
             $('.clear').click(()=>{
-
                 for(let i of Object.keys(itemCount)){
                     itemCount[i] = 0
                 }
@@ -13678,14 +13671,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! normalize.css */ "./node_modules/normalize.css/normalize.css");
 /* harmony import */ var material_design_icons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! material-design-icons */ "./node_modules/material-design-icons/index.js");
 /* harmony import */ var material_design_icons__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(material_design_icons__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var SCSS_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SCSS/main.scss */ "./src/scss/main.scss");
-/* harmony import */ var NodeModules_item_quantity_dropdown_lib_item_quantity_dropdown_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! NodeModules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css */ "./node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css");
-/* harmony import */ var NodeModules_item_quantity_dropdown_lib_item_quantity_dropdown_min__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! NodeModules/item-quantity-dropdown/lib/item-quantity-dropdown.min */ "./node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.js");
-/* harmony import */ var NodeModules_item_quantity_dropdown_lib_item_quantity_dropdown_min__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(NodeModules_item_quantity_dropdown_lib_item_quantity_dropdown_min__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var JS_custom_dropdown__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! JS/custom-dropdown */ "./src/js/custom-dropdown.js");
-/* harmony import */ var JS_custom_dropdown__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(JS_custom_dropdown__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var JS_custom_nouslider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! JS/custom-nouslider */ "./src/js/custom-nouslider.js");
-/* harmony import */ var nouislider_dist_nouislider_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! nouislider/dist/nouislider.css */ "./node_modules/nouislider/dist/nouislider.css");
+/* harmony import */ var NodeModules_item_quantity_dropdown_lib_item_quantity_dropdown_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! NodeModules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css */ "./node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css");
+/* harmony import */ var NodeModules_item_quantity_dropdown_lib_item_quantity_dropdown_min__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! NodeModules/item-quantity-dropdown/lib/item-quantity-dropdown.min */ "./node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.js");
+/* harmony import */ var NodeModules_item_quantity_dropdown_lib_item_quantity_dropdown_min__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(NodeModules_item_quantity_dropdown_lib_item_quantity_dropdown_min__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var JS_custom_dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! JS/custom-dropdown */ "./src/js/custom-dropdown.js");
+/* harmony import */ var JS_custom_dropdown__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(JS_custom_dropdown__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var JS_custom_nouslider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! JS/custom-nouslider */ "./src/js/custom-nouslider.js");
+/* harmony import */ var nouislider_dist_nouislider_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! nouislider/dist/nouislider.css */ "./node_modules/nouislider/dist/nouislider.css");
+/* harmony import */ var SCSS_main_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! SCSS/main.scss */ "./src/scss/main.scss");
 /* harmony import */ var src_img_png_room350_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/img/png/room350.png */ "./src/img/png/room350.png");
 /* harmony import */ var src_img_png_room352_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/img/png/room352.png */ "./src/img/png/room352.png");
 /* harmony import */ var src_img_png_room444_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/img/png/room444.png */ "./src/img/png/room444.png");
