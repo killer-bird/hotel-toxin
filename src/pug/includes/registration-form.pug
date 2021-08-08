@@ -14,22 +14,22 @@ main
                 })
             .form-input-block
                 label.form-label(for="guests") гости
-                #guests.iqdropdown.form-wrapper
-                    p.iqdropdown-selection.material-icons
-                    .iqdropdown-menu
-                        .iqdropdown-menu-option(data-id="adults")
-                            div
-                                p.iqdropdown-item взрослые
+                #guests.iqdropdown.dropdown-wrapper
+                        p.iqdropdown-selection.material-icons
+                        .iqdropdown-menu
+                            .iqdropdown-menu-option(data-id="adults")
+                                div
+                                    p.iqdropdown-item взрослые
 
-                        .iqdropdown-menu-option(data-id="kids")
-                            div
-                                p.iqdropdown-item дети
+                            .iqdropdown-menu-option(data-id="kids")
+                                div
+                                    p.iqdropdown-item дети
 
-                        .iqdropdown-menu-option(data-id="babys")
-                            div
-                                p.iqdropdown-item младенцы
-                        .controls
-                            .clear очистить
-                            .apply применить
+                            .iqdropdown-menu-option(data-id="babys")
+                                div
+                                    p.iqdropdown-item младенцы
+                            .controls
+                                .clear очистить
+                                .apply применить
 
             +button({link:"rooms.html", value:"Подобрать номер", mod: ["with_arrow", "block"]})

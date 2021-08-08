@@ -1,11 +1,11 @@
 import "normalize.css";
 import "material-design-icons"
-import 'SCSS/main.scss'
 import 'NodeModules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css'
 import 'NodeModules/item-quantity-dropdown/lib/item-quantity-dropdown.min'
 import "JS/custom-dropdown"
 import "JS/custom-nouslider"
 import 'nouislider/dist/nouislider.css';
+import 'SCSS/main.scss'
 import img350 from 'src/img/png/room350.png'
 import img352 from 'src/img/png/room352.png'
 import img444 from 'src/img/png/room444.png'

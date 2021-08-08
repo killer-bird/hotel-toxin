@@ -9,11 +9,16 @@ mixin room(params)
         const revs = params.revs
         const link = params.roomLink
 
-    a.roomLink(href=`room${number}.html`)
-        .room-card
-            .img
-                img(src=`src/img/png/room${number}.png` widht="270" height="151" alt="#{number}")
-            .room-card-container
+
+    .room-card
+        .img
+            img(src=`src/img/png/room${number}.png` widht="270" height="151" alt=`${number}`)
+            .pointers
+                .pointer_active
+                each i in Array(3)
+                    .pointer
+        a(href=`room${number}.html`)
+            .room-card-container()
                 .room-card-content
                     .room-card-index
                         .number

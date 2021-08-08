@@ -10,7 +10,7 @@ import 'NodeModules/air-datepicker/dist/css/datepicker.css'
 import "JS/custom-datepicker"
 import "JS/custom-dropdown"
 import "jquery"
-import 'SCSS/main.scss'
 import 'JS/custom-chart'
+import 'SCSS/main.scss'
 
 

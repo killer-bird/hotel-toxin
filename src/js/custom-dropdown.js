@@ -1,18 +1,11 @@
 $(document).ready(() => {
     $('#guests.iqdropdown').iqDropdown({
         maxItems:20,
-        controls: {
-            position: 'right',
-            displayCls: 'iqdropdown-item-display',
-            controlsCls: 'iqdropdown-item-controls',
-            counterCls: 'counter'
-        },
         //этот говнокод был проспонсирован замечательным человеком, который
         // написал этот прекрасный плагин без функции Clear
         setSelectionText: function setSelectionText(itemCount, totalItems){
             let total = itemCount['kids'] + itemCount['babys'] +itemCount['adults']
             $('.clear').click(()=>{
-
                 for(let i of Object.keys(itemCount)){
                     itemCount[i] = 0
                 }

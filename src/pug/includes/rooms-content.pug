@@ -7,9 +7,9 @@ main
             .rooms-left
                 +input({type:"button", label:"даты пребывания в отеле", id:"dates", value:"expand_more",wClasses:["middle"], placeholder:"19 авг - 23 авг"})
                 .form-input-block
-                    #guests.iqdropdown.form-wrapper_middle
+                    #guests.iqdropdown.dropdown-wrapper_middle
                         p.iqdropdown-selection.material-icons
-                        .iqdropdown-menu
+                        .iqdropdown-menu.form-wrapper_middle
                             .iqdropdown-menu-option(data-id="adults")
                                 div
                                     p.iqdropdown-item взрослые
@@ -45,9 +45,9 @@ main
                     +input({type: "checkbox_rich", id: "invalids_helper", label: "Помощник для инвалидов", value: "На 1 этаже вас встретит специалист <br> и проводит до номера."})
                 .form-input-block
                     label.form-label(for="conveniences") удобства номера
-                    #conveniences.iqdropdown.form-wrapper_middle
+                    #conveniences.iqdropdown.dropdown-wrapper_middle
                         p.iqdropdown-selection.material-icons
-                        .iqdropdown-menu
+                        .iqdropdown-menu.form-wrapper_middle
                             .iqdropdown-menu-option(data-id="bedrooms")
                                 div
                                     p.iqdropdown-item спальни
